@@ -58,7 +58,7 @@ function Router() {
 
 function App() {
   useEffect(() => {
-    document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("dark");
   }, []);
 
   const queryClient = new QueryClient();
@@ -70,7 +70,7 @@ function App() {
           <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
             <Router />
           </WouterRouter>
-          <Toaster theme="dark" position="top-right" richColors />
+          <Toaster theme="light" position="top-right" richColors />
         </TooltipProvider>
       </IncidentSimulationProvider>
     </QueryClientProvider>

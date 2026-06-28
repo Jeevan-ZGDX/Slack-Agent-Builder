@@ -113,14 +113,14 @@ export default function IncidentIntelligencePackage() {
                             <h4 className="font-semibold text-foreground text-sm">Execute Redis Pool Recovery Runbook</h4>
                             <p className="text-xs text-muted-foreground mt-1">Scale up connection pool limits dynamically via MCP.</p>
                           </div>
-                          <Button size="sm" variant="secondary">View Runbook</Button>
+                          <Button size="sm" variant="secondary" onClick={() => { resetSimulation(); setLocation('/runbooks'); }}>View Runbook</Button>
                         </div>
                         <div className="flex items-center justify-between bg-card border border-border/50 rounded-lg p-4 hover:border-primary/50 transition-colors">
                           <div className="flex-1">
                             <h4 className="font-semibold text-foreground text-sm">Page Suggested Experts</h4>
                             <p className="text-xs text-muted-foreground mt-1">Sarah Jenkins (SRE), Mike Torres (Backend)</p>
                           </div>
-                          <Button size="sm" variant="secondary">Page Team</Button>
+                          <Button size="sm" variant="secondary" onClick={() => { resetSimulation(); setLocation('/experts'); }}>Page Team</Button>
                         </div>
                       </div>
                     </section>
