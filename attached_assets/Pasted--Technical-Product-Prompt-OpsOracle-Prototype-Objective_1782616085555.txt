@@ -1,0 +1,826 @@
+# Technical Product Prompt – OpsOracle Prototype
+
+## Objective
+
+Build a modern enterprise-grade prototype called **OpsOracle**, an AI-powered Slack Incident Intelligence Agent.
+
+The prototype should demonstrate the complete end-to-end workflow of detecting operational incidents, reasoning over historical context, discovering experts, creating incident war rooms, generating runbooks, and orchestrating incident response entirely inside a Slack-inspired interface.
+
+This is a prototype, but it should look and behave like a production SaaS product suitable for a hackathon demonstration.
+
+---
+
+# Overall Design
+
+Create a clean enterprise UI similar to:
+
+* Slack
+* Linear
+* Datadog
+* Grafana
+* Atlassian
+
+Theme:
+
+* Dark mode
+* Blue accents
+* Professional enterprise design
+* Modern cards
+* Rounded panels
+* Excellent spacing
+* Responsive layout
+* Smooth animations
+* Skeleton loaders
+* Toast notifications
+* Loading states
+
+---
+
+# Landing Dashboard
+
+The home dashboard should immediately show operational health.
+
+Display:
+
+• Total Active Incidents
+
+• Critical Incidents
+
+• Resolved Today
+
+• Average MTTR
+
+• Services Being Monitored
+
+• Alerts Received Today
+
+• AI Actions Taken
+
+• Historical Incidents Indexed
+
+Charts:
+
+* Incident trend
+* Incident severity distribution
+* Service health
+* Resolution timeline
+* MTTR graph
+* Alert frequency
+
+---
+
+# Left Navigation
+
+Dashboard
+
+Live Incident Feed
+
+Alert Channels
+
+War Rooms
+
+Runbooks
+
+Expert Discovery
+
+Historical Search
+
+Incident Timeline
+
+Postmortems
+
+Analytics
+
+MCP Tools
+
+Settings
+
+---
+
+# Live Slack Workspace
+
+Create a realistic Slack-like interface.
+
+Include:
+
+Channels
+
+#alerts-prod
+
+#pagerduty
+
+#datadog
+
+#sentry
+
+#engineering
+
+#incident-history
+
+#general
+
+Each channel should contain simulated conversations.
+
+Examples:
+
+Datadog alerts
+
+Engineers discussing outages
+
+Deployments
+
+Errors
+
+Logs
+
+Customer complaints
+
+Latency spikes
+
+Database failures
+
+Payment gateway issues
+
+Redis failures
+
+API timeout discussions
+
+---
+
+# Live Event Simulation
+
+Provide a button:
+
+"Simulate Production Incident"
+
+When clicked:
+
+Generate realistic events.
+
+Example:
+
+Datadog posts
+
+"Checkout service error rate increased to 23%"
+
+PagerDuty posts
+
+"P1 Alert"
+
+Sentry posts stack traces
+
+Slack engineers begin discussing
+
+Customers report failures
+
+The system should animate messages appearing live.
+
+---
+
+# AI Signal Detection
+
+OpsOracle should automatically detect:
+
+Repeated failures
+
+Keywords
+
+High severity alerts
+
+Critical services
+
+Multiple alerts from different sources
+
+Repeated error codes
+
+Spike in failures
+
+Human reactions
+
+Fire emoji
+
+Warning emoji
+
+Rotating light emoji
+
+The AI should classify severity.
+
+P1
+
+P2
+
+P3
+
+Display confidence score.
+
+---
+
+# Incident Detection Pipeline
+
+Display an animated pipeline:
+
+Signal Detection
+
+↓
+
+Classification
+
+↓
+
+Historical Search
+
+↓
+
+Correlation
+
+↓
+
+Blast Radius
+
+↓
+
+Expert Discovery
+
+↓
+
+Runbook Retrieval
+
+↓
+
+War Room Creation
+
+↓
+
+Incident Intelligence Package
+
+↓
+
+Status Updates
+
+↓
+
+Postmortem Generation
+
+Each step should animate progressively.
+
+---
+
+# Historical Incident Search
+
+Create a searchable database.
+
+Searching should return:
+
+Past incidents
+
+Root causes
+
+Resolution summary
+
+Services involved
+
+Engineers involved
+
+Timeline
+
+MTTR
+
+Related discussions
+
+Confidence
+
+Filters:
+
+Last 30 days
+
+60 days
+
+90 days
+
+Service
+
+Error Code
+
+Severity
+
+Responder
+
+---
+
+# Conversational Correlation
+
+After detecting a new incident:
+
+Search historical Slack messages.
+
+Display:
+
+Matched conversations
+
+Matched incidents
+
+Similarity score
+
+Root cause summary
+
+Previous fixes
+
+Related services
+
+Dependency graph
+
+Display AI explanation:
+
+"This incident is 92% similar to Incident #143."
+
+---
+
+# Expert Discovery
+
+Automatically identify engineers.
+
+Each engineer card shows:
+
+Name
+
+Department
+
+Expertise score
+
+Past incidents resolved
+
+Availability
+
+Confidence
+
+Reason selected
+
+Example:
+
+"You resolved Redis timeout incidents three times."
+
+Rank engineers.
+
+Allow paging.
+
+---
+
+# Runbook Retrieval
+
+Generate a runbook panel.
+
+Show:
+
+Title
+
+Summary
+
+Steps
+
+Estimated completion time
+
+Previous success rate
+
+Related incidents
+
+Open Runbook button
+
+---
+
+# Blast Radius Analysis
+
+Visualize affected services.
+
+Interactive dependency graph.
+
+Services:
+
+Checkout
+
+Payments
+
+Orders
+
+Inventory
+
+Authentication
+
+Notifications
+
+Recommendations:
+
+Likely impacted systems
+
+Risk score
+
+Customer impact
+
+Priority
+
+---
+
+# Automatic War Room
+
+Create incident channels.
+
+Example:
+
+#incident-2026-checkout
+
+Inside:
+
+Incident timeline
+
+Pinned context
+
+Suggested responders
+
+Runbook
+
+Buttons:
+
+Join Incident
+
+Assign Commander
+
+Escalate
+
+Resolve
+
+False Positive
+
+---
+
+# Incident Intelligence Package (IIP)
+
+Generate a rich dashboard containing:
+
+Severity
+
+Incident summary
+
+Historical context
+
+Root cause prediction
+
+Blast radius
+
+Recommended responders
+
+Runbook
+
+Timeline
+
+Recommended actions
+
+Risk score
+
+Confidence
+
+Expected MTTR
+
+Business impact
+
+Action buttons
+
+---
+
+# Incident Timeline
+
+Build a live timeline.
+
+Display:
+
+Alert received
+
+Detection
+
+Correlation
+
+War room created
+
+Experts invited
+
+Commander assigned
+
+Runbook opened
+
+Mitigation started
+
+Resolved
+
+Postmortem created
+
+---
+
+# AI Assistant Panel
+
+Floating AI assistant.
+
+Capabilities:
+
+Explain incident
+
+Predict cause
+
+Suggest rollback
+
+Summarize conversations
+
+Generate status updates
+
+Generate executive summaries
+
+Answer questions
+
+---
+
+# MCP Tool Dashboard
+
+Show available tools.
+
+search_incident_history
+
+get_runbook
+
+get_expert_responders
+
+assess_blast_radius
+
+create_war_room
+
+post_status_update
+
+generate_postmortem
+
+Each tool should show:
+
+Status
+
+Execution logs
+
+Input
+
+Output
+
+Execution time
+
+Success indicator
+
+---
+
+# Status Update Generator
+
+Generate updates every few minutes.
+
+Format:
+
+Current status
+
+Systems affected
+
+Mitigation
+
+ETA
+
+Next update
+
+Slack Block Kit preview.
+
+---
+
+# Postmortem Generator
+
+Automatically create:
+
+Executive Summary
+
+Timeline
+
+Root Cause
+
+Contributing Factors
+
+Resolution
+
+Lessons Learned
+
+Action Items
+
+Owners
+
+Due Dates
+
+Export button.
+
+---
+
+# Analytics Dashboard
+
+Display:
+
+Incident count
+
+Service reliability
+
+Top affected services
+
+Most active responders
+
+Average MTTR
+
+Average MTTD
+
+Resolution trends
+
+Heatmaps
+
+Charts
+
+Leaderboards
+
+---
+
+# Search Everywhere
+
+Global search.
+
+Search:
+
+Services
+
+Incidents
+
+Engineers
+
+Channels
+
+Messages
+
+Runbooks
+
+Error codes
+
+Alerts
+
+---
+
+# Notifications
+
+Real-time toast notifications.
+
+Incident detected
+
+War room created
+
+Runbook found
+
+Expert discovered
+
+Incident resolved
+
+---
+
+# Settings
+
+Workspace configuration
+
+Severity thresholds
+
+Slack channels
+
+Alert keywords
+
+LLM settings
+
+MCP configuration
+
+Integrations
+
+User permissions
+
+---
+
+# Sample Data
+
+Populate the prototype with realistic enterprise data.
+
+Generate:
+
+50+
+
+Historical incidents
+
+100+
+
+Slack conversations
+
+25+
+
+Engineers
+
+20+
+
+Services
+
+15+
+
+Runbooks
+
+Thousands of searchable messages.
+
+---
+
+# Frontend Stack
+
+Next.js
+
+React
+
+TypeScript
+
+Tailwind CSS
+
+shadcn/ui
+
+Framer Motion
+
+Recharts
+
+React Query
+
+Lucide Icons
+
+---
+
+# Backend
+
+Node.js
+
+Express
+
+Mock REST APIs
+
+Mock WebSocket server
+
+SQLite
+
+Redis simulation
+
+JSON seed data
+
+---
+
+# AI Simulation
+
+No external LLM is required.
+
+Use realistic mocked AI responses to simulate:
+
+Severity classification
+
+Historical correlation
+
+Root cause prediction
+
+Runbook recommendation
+
+Expert discovery
+
+Status generation
+
+Postmortem creation
+
+Conversation summaries
+
+---
+
+# Demo Flow
+
+Provide a guided demo mode:
+
+1. Dashboard opens.
+
+2. Simulate production outage.
+
+3. AI detects incident.
+
+4. Historical search runs.
+
+5. Correlation completes.
+
+6. Blast radius appears.
+
+7. Experts discovered.
+
+8. War room created.
+
+9. Incident Intelligence Package generated.
+
+10. Commander joins.
+
+11. Resolution simulated.
+
+12. Postmortem generated.
+
+The prototype should feel like a polished enterprise SaaS application that convincingly demonstrates the complete incident-response lifecycle described in the OpsOracle PRD.
